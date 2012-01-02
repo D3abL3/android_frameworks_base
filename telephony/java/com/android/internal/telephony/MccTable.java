@@ -174,13 +174,13 @@ public final class MccTable
         if (!TextUtils.isEmpty(mccmnc)) {
             int mcc, mnc;
 
-            try {
+/*            try {
                 mcc = Integer.parseInt(mccmnc.substring(0,3));
                 mnc = Integer.parseInt(mccmnc.substring(3));
             } catch (NumberFormatException e) {
                 Log.e(LOG_TAG, "Error parsing IMSI");
                 return;
-            }
+            }*/
 
             Log.d(LOG_TAG, "updateMccMncConfiguration: mcc=" + mcc + ", mnc=" + mnc);
 
@@ -189,7 +189,7 @@ public final class MccTable
                 setLocaleFromMccIfNeeded(phone, mcc);
                 setWifiCountryCodeFromMcc(phone, mcc);
             }
-            try {
+/*            try {
                 Configuration config = ActivityManagerNative.getDefault().getConfiguration();
                 if (mcc != 0) {
                     config.mcc = mcc;
@@ -200,7 +200,7 @@ public final class MccTable
                 ActivityManagerNative.getDefault().updateConfiguration(config);
             } catch (RemoteException e) {
                 Log.e(LOG_TAG, "Can't update configuration", e);
-            }
+            }*/
         }
     }
 
