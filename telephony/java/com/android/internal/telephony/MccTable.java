@@ -180,7 +180,7 @@ public final class MccTable
             } catch (NumberFormatException e) {
                 Log.e(LOG_TAG, "Error parsing IMSI");
                 return;
-            }*/
+            }
 
             Log.d(LOG_TAG, "updateMccMncConfiguration: mcc=" + mcc + ", mnc=" + mnc);
 
@@ -189,7 +189,7 @@ public final class MccTable
                 setLocaleFromMccIfNeeded(phone, mcc);
                 setWifiCountryCodeFromMcc(phone, mcc);
             }
-/*            try {
+              try {
                 Configuration config = ActivityManagerNative.getDefault().getConfiguration();
                 if (mcc != 0) {
                     config.mcc = mcc;
