@@ -29,6 +29,7 @@ LOCAL_SHARED_LIBRARIES := \
 	libEGL \
 	libGLESv2
 
+
 #ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
 LOCAL_SHARED_LIBRARIES += \
         libQcomUI
